@@ -1,0 +1,11 @@
+include pyproject.toml build_backend.py MANIFEST.in README.md METHODOLOGY.md NOTES.md .env.example LICENSE
+recursive-include src/dalel *.py *.json *.tsv *.gz *.dart *.yml *.html *.css *.js AUTHORS COPYING README
+recursive-include src/locqa *.py
+global-exclude __pycache__ *.pyc *.pyo .DS_Store
+
+prune src/dalel/assets/workspace/demo
+exclude src/dalel/assets/workspace/src/demo.js
+include docs/design.md docs/contract.md docs/guide.md
+
+recursive-include docs/screenshots *.jpg
+recursive-include docs/images/readme *.jpg *.webp *.md

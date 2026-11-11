@@ -1,0 +1,14 @@
+{
+  "project": "Apertium Uzbek",
+  "source": "https://github.com/apertium/apertium-uzb",
+  "revision": "1bdee4a38c357226176d516ae533c43f8ecb045b",
+  "licence": "GPL-3.0; upstream COPYING and author notices included",
+  "source_sha256": "18281d405c44437f5d1b2c67e71d8b31f3d44fc316c223454714c27d81631ee4",
+  "lexicon_sha256": "7f41fd82e3dc645916991b8b4b52a37184d95aaff63f76574c93c8b90e84f1d1",
+  "entries": 51520,
+  "glossed_entries": 2578,
+  "transformation": "Latin-script lexical lemmas and continuation tags, case-folded and deduplicated; MIST/CA entries excluded. Candidate subset requires an explicit nonempty upstream gloss and excludes proper names. This is not a human-review claim. Upstream source retained compressed.",
+  "private_corpus_inputs": false,
+  "extractor": "tools/import_uzbek_lexicon.py",
+  "windows_note": "Use git show, since upstream contains the reserved filename PRN.prefix.dix."
+}

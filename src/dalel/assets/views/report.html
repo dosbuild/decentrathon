@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>dalel · Отчёт проверки</title>
+<style>
+:root{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:#20241f;background:#f1f0e9;font-size:15px;color-scheme:light}
+*{box-sizing:border-box}body{margin:0}header{background:#253c2c;color:#f7fbff;padding:34px max(24px,calc((100vw - 1180px)/2))}
+.brand{font-weight:750;letter-spacing:.16em;color:#d9ed99;font-size:13px}h1{font-size:40px;letter-spacing:-.045em;margin:14px 0 10px}
+header p{color:#c5d5df;max-width:850px;line-height:1.6;margin:0}.shell{max-width:1260px;margin:24px auto;padding:0 24px}
+.coverage{margin-top:18px;border-collapse:collapse;width:100%;font-size:12px}.coverage th,.coverage td{text-align:left;padding:5px 8px;border-bottom:1px solid #ffffff25}.coverage caption{text-align:left;font-size:14px;margin-bottom:8px;color:#c5d5df}
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin:0 0 18px}.stat{padding:18px;background:white;border:1px solid #dce4e9;border-radius:3px}.stat b{display:block;font-size:28px;margin-bottom:4px}
+.muted{color:#647382}.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;padding:16px;background:#fff;border:1px solid #dce4e9;border-radius:3px;position:sticky;top:10px;z-index:2;box-shadow:0 4px 16px #13283b0a}
+label{font-size:12px;font-weight:650;display:grid;gap:7px}label.search{flex:1;min-width:220px}input,select,button{font:inherit;border:1px solid #bac9d3;border-radius:7px;background:white;padding:10px;color:#18283b}button{cursor:pointer}input:focus,select:focus,button:focus{outline:3px solid #26a78b55;outline-offset:2px}
+.count{margin:18px 0;color:#526577;font-size:13px}.chips{display:flex;gap:7px;flex-wrap:wrap;margin:14px 0}.chip{font-size:12px;background:#e7ebdc;color:#40596c;border-radius:20px;padding:7px 10px}
+.card{background:white;border:1px solid #d9e3e9;border-radius:3px;margin:16px 0;overflow:hidden}.card[hidden]{display:none}.cardhead{padding:16px 20px;border-bottom:1px solid #e5ebef;display:flex;gap:10px;align-items:center;flex-wrap:wrap}.key{font:600 13px Consolas,monospace;overflow-wrap:anywhere;flex:1;min-width:180px}
+.badge{font-size:12px;font-weight:650;padding:5px 9px;border-radius:5px;background:#edf2f5}.high{color:#9a2035;background:#ffe8ed}.medium{color:#845314;background:#fff2d7}.low{color:#315a79;background:#e9f3fc}
+.columns{display:grid;grid-template-columns:1fr 1fr}.cell{padding:18px 20px;min-width:0}.cell+ .cell{border-left:1px solid #e5ebef}h2{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:#607588;margin:0 0 10px}.text{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.65}.evidence{margin:0;padding:16px 20px;background:#f6f5ef;border-block:1px solid #e5ebef;line-height:1.6}.proposal{padding:18px 20px}.review{font-size:12px;color:#647382;padding:0 20px 16px}
+mark{background:#fff0a6;color:inherit;border-radius:2px}del{background:#ffe5e7;color:#8e2937;text-decoration:line-through}ins{background:#d9f5e8;color:#126449;text-decoration:none}details{margin:24px 0;padding:18px;background:white;border:1px solid #dce4e9;border-radius:10px}summary{cursor:pointer;font-weight:650}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;line-height:1.5}.empty{padding:40px;text-align:center;color:#647382}footer{padding:20px 0 35px;color:#647382;font-size:12px;line-height:1.6}
+@media(max-width:700px){.stats{grid-template-columns:1fr 1fr}.columns{grid-template-columns:1fr}.cell+ .cell{border-left:0;border-top:1px solid #e5ebef}.shell{padding:0 14px}.toolbar{position:static}header{padding:26px 20px}h1{font-size:27px}}
+@media print{.toolbar{display:none}.card{break-inside:avoid}.card[hidden]{display:none}header{background:white;color:#18283b}header p{color:#526577}.shell{max-width:none}.stats{grid-template-columns:1fr 1fr 1fr 1fr}}
+</style>
+<header><div class="brand">dalel / QA</div><h1>Точность в каждом сообщении.</h1>
+<p>Исходные значения, проверяемые доказательства и предложения исправлений. Просмотрите доказательство и предложенный вариант; решение о принятии остаётся за проверяющим.</p>
+<table class="coverage"><caption>Покрытие по типам · режим {{ coverage.get('mode','не указан') }} · API-вызовов {{ coverage.get('api_calls',0) }}</caption><thead><tr><th>Тип</th><th>Находки</th><th>Способ проверки</th></tr></thead><tbody>{% for row in methods %}<tr><td>{{ row.label }}</td><td>{{ row.count }}</td><td>{{ row.method }}</td></tr>{% endfor %}</tbody></table></header>
+<main class="shell">
+{% if coverage.get('target_locale','').replace('-','_').split('_')[0]=='uz' %}
+<p role="note">Автоматический анализ без проверки носителем узбекского. Языковые кандидаты не откалиброваны и находятся в диагностике; формальные ошибки показаны ниже.</p>
+{% endif %}
+<section class="stats" aria-label="Сводка">
+<div class="stat"><b>{{ total }}</b>находок</div>
+{% for level in ('high','medium','low') %}<div class="stat"><b>{{ severities[level] }}</b>{{ levels[level] }} важность</div>{% endfor %}
+</section><div class="chips">{% for kind,n in counts|dictsort %}<span class="chip">{{ types.get(kind,kind) }} · {{ n }}</span>{% endfor %}</div>
+<section class="toolbar" aria-label="Фильтры отчёта"><label class="search">Поиск по ключу или тексту<input id="query" type="search" placeholder="Ключ, фрагмент или доказательство" autocomplete="off"></label>
+<label>Тип<select id="kind"><option value="">Все типы</option>{% for kind in counts|sort %}<option value="{{ kind }}">{{ types.get(kind,kind) }}</option>{% endfor %}</select></label>
+<label>Важность<select id="level"><option value="">Все уровни</option>{% for level in ('high','medium','low') %}<option value="{{ level }}">{{ levels[level] }}</option>{% endfor %}</select></label>
+<button id="reset" type="button">Сбросить</button></section>
+<p class="count" id="count" role="status" aria-live="polite">Показано {{ total }} из {{ total }}</p>
+<section id="findings" aria-label="Находки">{% for card in cards %}
+<article class="card" data-kind="{{ card.issue_type }}" data-level="{{ card.severity }}">
+<div class="cardhead"><code class="key">{{ card.key }}</code><span class="badge">{{ types.get(card.issue_type,card.issue_type) }}</span><span class="badge {{ card.severity }}">{{ levels[card.severity] }}</span></div>
+<div class="columns"><div class="cell"><h2>Исходный текст</h2><div class="text">{{ card.source_html|safe }}</div></div><div class="cell"><h2>Текущий перевод</h2><div class="text">{{ card.target_html|safe }}</div></div></div>
+<p class="evidence">{{ card.evidence }}</p><div class="proposal"><h2>Предложение · изменения относительно перевода</h2><div class="text">{{ card.diff_html|safe }}</div></div>
+<div class="review">Уверенность: {{ '%.0f'|format(card.confidence*100) }}% · {% if card.reviewed_by_human %}Дефект рассмотрен человеком{% else %}Дефект не рассмотрен человеком{% endif %}</div>
+</article>{% endfor %}</section><div class="empty" id="empty" {% if total %}hidden{% endif %}>По выбранным условиям находок нет.</div>
+<details><summary>Структурная диагностика · {{ diagnostic_count }}</summary><pre>{{ diagnostics }}</pre></details>
+<footer>Режим: {{ coverage.get('mode','не указан') }}. {% if coverage.get('strings') is not none %}Строк в исходнике: {{ coverage.strings }}.{% endif %}
+{% if coverage.get('requires_language_pass') %}Языковой проход требуется для типов: {{ coverage.requires_language_pass|join(', ') }}.{% endif %}
+<br>Один файл, без внешних ресурсов и сетевых запросов. JSON остаётся источником машиночитаемых данных.</footer></main>
+<script>
+(()=>{'use strict';const query=document.getElementById('query'),kind=document.getElementById('kind'),level=document.getElementById('level');
+const cards=Array.from(document.querySelectorAll('.card')),texts=cards.map(c=>c.textContent.toLocaleLowerCase('ru'));
+function filter(){const q=query.value.toLocaleLowerCase('ru').trim();let n=0;cards.forEach((c,i)=>{const show=(!q||texts[i].includes(q))&&(!kind.value||c.dataset.kind===kind.value)&&(!level.value||c.dataset.level===level.value);c.hidden=!show;if(show)n++});document.getElementById('count').textContent='Показано '+n+' из '+cards.length;document.getElementById('empty').hidden=n!==0}
+[query,kind,level].forEach(el=>el.addEventListener('input',filter));document.getElementById('reset').addEventListener('click',()=>{query.value=kind.value=level.value='';filter();query.focus()});})();
+</script></html>

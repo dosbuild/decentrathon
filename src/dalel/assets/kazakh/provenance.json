@@ -1,0 +1,10 @@
+{
+  "source": "https://github.com/apertium/apertium-kaz",
+  "revision": "95c6dd0d8536ee69a7058634b03a3e82100b6b6e",
+  "source_file": "apertium-kaz.kaz.lexc",
+  "source_sha256": "ea8a0eabdbd3ba98774efec755cc39f7f9dcb72da5464d93b900700a45548771",
+  "entries": 30530,
+  "license": "GPL-3.0-only",
+  "extraction": "All unescaped single Cyrillic-word canonical left-side entries, with continuation tags; no task corpus filtering.",
+  "sha256": "67b6780d2c963da3e09ecb5eccbaba9b5917bcf86fc219d481f3f719a6af65ab"
+}

@@ -1,0 +1,56 @@
+name: dalel ARB comparison
+description: Check changed consumer ARBs with the pinned action source on both revisions
+inputs:
+  head-root:
+    description: Consumer head checkout
+    required: true
+  base-root:
+    description: Consumer base checkout
+    required: true
+  source:
+    description: Optional relative source ARB; otherwise read Flutter l10n.yaml
+    required: false
+  targets:
+    description: Optional newline-separated relative target ARBs
+    required: false
+runs:
+  using: composite
+  steps:
+    - name: Install the pinned checker
+      shell: bash
+      run: |
+        python - <<'PY'
+        import hashlib,json,os,subprocess,sys
+        from pathlib import Path
+        root=Path(os.environ['GITHUB_ACTION_PATH']).resolve()
+        manifest=root/'wheel.json'
+        if manifest.is_file():
+            record=json.loads(manifest.read_text(encoding='utf8'))
+            package=(root/record['path']).resolve()
+            if not package.is_relative_to(root) or package.suffix!='.whl' or hashlib.sha256(package.read_bytes()).hexdigest()!=record['sha256']:
+                raise SystemExit('Shipped locqa wheel checksum mismatch')
+        else:
+            package=root
+        subprocess.run([sys.executable,'-m','pip','install','--force-reinstall','--disable-pip-version-check',str(package)],check=True)
+        PY
+    - name: Compare consumer data and write findings to job summary
+      shell: bash
+      env:
+        LOCQA_HEAD_ROOT: ${{ inputs.head-root }}
+        LOCQA_BASE_ROOT: ${{ inputs.base-root }}
+        LOCQA_SOURCE_INPUT: ${{ inputs.source }}
+        LOCQA_TARGET_INPUTS: ${{ inputs.targets }}
+        PYTHONUTF8: '1'
+      run: |
+        python - <<'PY'
+        import os,subprocess,sys
+        from pathlib import Path
+        command=[sys.executable,str(Path(os.environ['GITHUB_ACTION_PATH'])/'tools/consumer_check.py'),
+            '--head-root',os.environ['LOCQA_HEAD_ROOT'],'--base-root',os.environ['LOCQA_BASE_ROOT'],
+            '--out',str(Path(os.environ['RUNNER_TEMP'])/'locqa-results')]
+        if os.environ['LOCQA_SOURCE_INPUT']:
+            command+=['--source',os.environ['LOCQA_SOURCE_INPUT']]
+        for target in os.environ['LOCQA_TARGET_INPUTS'].splitlines():
+            if target.strip():command+=['--target',target.strip()]
+        raise SystemExit(subprocess.call(command))
+        PY

@@ -1,0 +1,15 @@
+{
+  "locale": "uz",
+  "script": "Latin",
+  "apostrophe_marks": ["'", "’", "‘", "`", "ʼ", "ʻ"],
+  "standard_letter_mark": "ʻ",
+  "standard_separator_mark": "ʼ",
+  "policy": "corpus_dominant_by_letter_or_separator_function",
+  "minimum_group_occurrences": 6,
+  "minimum_dominant_share": 0.8,
+  "minimum_equivalent_word_occurrences": 3,
+  "tie_policy": "abstain",
+  "lexicon": "Apertium-uzb, pinned source and GPL notices in assets/uzbek. All attested lemmas and productive forms protect originals; correction targets require unique exact explicitly glossed lemmas.",
+  "lexical_checks": ["x versus h", "missing components of sh/ch/ng", "double vowels and lexical tutuq placement"],
+  "limitations": "Minority mark findings require repeated equivalents. Names copied from source and protected message syntax are excluded. Sparse dictionary coverage does not establish translation meaning or complete spelling coverage. No lexical diagnosis is inferred from word frequency alone."
+}

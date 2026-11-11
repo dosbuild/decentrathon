@@ -1,0 +1,42 @@
+name: Changed ARB validation
+on:
+  pull_request:
+    paths:
+      - '**/*.arb'
+      - 'l10n.yaml'
+permissions:
+  contents: read
+jobs:
+  localization:
+    runs-on: ubuntu-latest
+    env:
+      LOCQA_BUDGET_USD: '0'
+    steps:
+      - name: Checkout checker from the base revision
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: checker
+          persist-credentials: false
+      - name: Checkout proposed data
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: consumer-head
+          persist-credentials: false
+      - name: Checkout original data
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: consumer-base
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compare ARB findings
+        uses: ./checker
+        with:
+          head-root: consumer-head
+          base-root: consumer-base
+          source: ${{ vars.LOCQA_SOURCE_ARB }}
+          targets: ${{ vars.LOCQA_TARGET_ARBS }}

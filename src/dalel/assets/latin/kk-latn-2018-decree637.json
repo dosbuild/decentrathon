@@ -1,0 +1,631 @@
+{
+  "id": "kk-latn-2018-decree637",
+  "version": 1,
+  "decree_date": "2018-02-19",
+  "decree_number": 637,
+  "source_url": "https://www.akorda.kz/upload/media/files/4875d3f1718f50dd282c242ea2ac9ff5.docx",
+  "source_sha256": "f316e9c5a8bcacdf2a0885b8a6a662df39d2f2c5d831c63b829e982abedb47ae",
+  "table": [
+    {
+      "number": 1,
+      "upper": "A",
+      "lower": "a",
+      "sounds": [
+        "а"
+      ],
+      "raw_table_letter": "A a",
+      "raw_table_sound": "[а]"
+    },
+    {
+      "number": 2,
+      "upper": "Á",
+      "lower": "á",
+      "sounds": [
+        "ә"
+      ],
+      "raw_table_letter": "Á á",
+      "raw_table_sound": "[ә]"
+    },
+    {
+      "number": 3,
+      "upper": "B",
+      "lower": "b",
+      "sounds": [
+        "б"
+      ],
+      "raw_table_letter": "B b",
+      "raw_table_sound": "[б]"
+    },
+    {
+      "number": 4,
+      "upper": "D",
+      "lower": "d",
+      "sounds": [
+        "д"
+      ],
+      "raw_table_letter": "D d",
+      "raw_table_sound": "[д]"
+    },
+    {
+      "number": 5,
+      "upper": "E",
+      "lower": "e",
+      "sounds": [
+        "е"
+      ],
+      "raw_table_letter": "E e",
+      "raw_table_sound": "[е]"
+    },
+    {
+      "number": 6,
+      "upper": "F",
+      "lower": "f",
+      "sounds": [
+        "ф"
+      ],
+      "raw_table_letter": "F f",
+      "raw_table_sound": "[ф]"
+    },
+    {
+      "number": 7,
+      "upper": "G",
+      "lower": "g",
+      "sounds": [
+        "г"
+      ],
+      "raw_table_letter": "G g",
+      "raw_table_sound": "[г]"
+    },
+    {
+      "number": 8,
+      "upper": "Ǵ",
+      "lower": "ǵ",
+      "sounds": [
+        "ғ"
+      ],
+      "raw_table_letter": "Ǵ ǵ",
+      "raw_table_sound": "[ғ]"
+    },
+    {
+      "number": 9,
+      "upper": "H",
+      "lower": "h",
+      "sounds": [
+        "х",
+        "һ"
+      ],
+      "raw_table_letter": "H h",
+      "raw_table_sound": "[х],  [h]"
+    },
+    {
+      "number": 10,
+      "upper": "I",
+      "lower": "i",
+      "sounds": [
+        "і"
+      ],
+      "raw_table_letter": "I i",
+      "raw_table_sound": "[і]"
+    },
+    {
+      "number": 11,
+      "upper": "I",
+      "lower": "ı",
+      "sounds": [
+        "и",
+        "й"
+      ],
+      "raw_table_letter": "I ı",
+      "raw_table_sound": "[и], [й]"
+    },
+    {
+      "number": 12,
+      "upper": "J",
+      "lower": "j",
+      "sounds": [
+        "ж"
+      ],
+      "raw_table_letter": "J j",
+      "raw_table_sound": "[ж]"
+    },
+    {
+      "number": 13,
+      "upper": "K",
+      "lower": "k",
+      "sounds": [
+        "к"
+      ],
+      "raw_table_letter": "K k",
+      "raw_table_sound": "[к]"
+    },
+    {
+      "number": 14,
+      "upper": "L",
+      "lower": "l",
+      "sounds": [
+        "л"
+      ],
+      "raw_table_letter": "L l",
+      "raw_table_sound": "[л]"
+    },
+    {
+      "number": 15,
+      "upper": "M",
+      "lower": "m",
+      "sounds": [
+        "м"
+      ],
+      "raw_table_letter": "M m",
+      "raw_table_sound": "[м]"
+    },
+    {
+      "number": 16,
+      "upper": "N",
+      "lower": "n",
+      "sounds": [
+        "н"
+      ],
+      "raw_table_letter": "N n",
+      "raw_table_sound": "[н]"
+    },
+    {
+      "number": 17,
+      "upper": "Ń",
+      "lower": "ń",
+      "sounds": [
+        "ң"
+      ],
+      "raw_table_letter": "Ń ń",
+      "raw_table_sound": "[ң]"
+    },
+    {
+      "number": 18,
+      "upper": "O",
+      "lower": "o",
+      "sounds": [
+        "о"
+      ],
+      "raw_table_letter": "O o",
+      "raw_table_sound": "[о]"
+    },
+    {
+      "number": 19,
+      "upper": "Ó",
+      "lower": "ó",
+      "sounds": [
+        "ө"
+      ],
+      "raw_table_letter": "О́ ó",
+      "raw_table_sound": "[ө]"
+    },
+    {
+      "number": 20,
+      "upper": "P",
+      "lower": "p",
+      "sounds": [
+        "п"
+      ],
+      "raw_table_letter": "P p",
+      "raw_table_sound": "[п]"
+    },
+    {
+      "number": 21,
+      "upper": "Q",
+      "lower": "q",
+      "sounds": [
+        "қ"
+      ],
+      "raw_table_letter": "Q q",
+      "raw_table_sound": "[қ]"
+    },
+    {
+      "number": 22,
+      "upper": "R",
+      "lower": "r",
+      "sounds": [
+        "р"
+      ],
+      "raw_table_letter": "R r",
+      "raw_table_sound": "[р]"
+    },
+    {
+      "number": 23,
+      "upper": "S",
+      "lower": "s",
+      "sounds": [
+        "с"
+      ],
+      "raw_table_letter": "S s",
+      "raw_table_sound": "[c]"
+    },
+    {
+      "number": 24,
+      "upper": "T",
+      "lower": "t",
+      "sounds": [
+        "т"
+      ],
+      "raw_table_letter": "T t",
+      "raw_table_sound": "[т]"
+    },
+    {
+      "number": 25,
+      "upper": "U",
+      "lower": "u",
+      "sounds": [
+        "ұ"
+      ],
+      "raw_table_letter": "U u",
+      "raw_table_sound": "[ұ]"
+    },
+    {
+      "number": 26,
+      "upper": "Ú",
+      "lower": "ú",
+      "sounds": [
+        "ү"
+      ],
+      "raw_table_letter": "Ú ú",
+      "raw_table_sound": "[ү]"
+    },
+    {
+      "number": 27,
+      "upper": "V",
+      "lower": "v",
+      "sounds": [
+        "в"
+      ],
+      "raw_table_letter": "V v",
+      "raw_table_sound": "[в]"
+    },
+    {
+      "number": 28,
+      "upper": "Y",
+      "lower": "y",
+      "sounds": [
+        "ы"
+      ],
+      "raw_table_letter": "Y y",
+      "raw_table_sound": "[ы]"
+    },
+    {
+      "number": 29,
+      "upper": "Ý",
+      "lower": "ý",
+      "sounds": [
+        "у"
+      ],
+      "raw_table_letter": "Ý ý",
+      "raw_table_sound": "[у]"
+    },
+    {
+      "number": 30,
+      "upper": "Z",
+      "lower": "z",
+      "sounds": [
+        "з"
+      ],
+      "raw_table_letter": "Z z",
+      "raw_table_sound": "[з]"
+    },
+    {
+      "number": 31,
+      "upper": "Sh",
+      "lower": "sh",
+      "sounds": [
+        "ш"
+      ],
+      "raw_table_letter": "Sh sh",
+      "raw_table_sound": "[ш]"
+    },
+    {
+      "number": 32,
+      "upper": "Ch",
+      "lower": "ch",
+      "sounds": [
+        "ч"
+      ],
+      "raw_table_letter": "Ch ch",
+      "raw_table_sound": "[ч]"
+    }
+  ],
+  "mapping": {
+    "а": {
+      "lower": "a",
+      "upper": "A",
+      "all_caps": "A",
+      "origin": "decree",
+      "row": 1
+    },
+    "ә": {
+      "lower": "á",
+      "upper": "Á",
+      "all_caps": "Á",
+      "origin": "decree",
+      "row": 2
+    },
+    "б": {
+      "lower": "b",
+      "upper": "B",
+      "all_caps": "B",
+      "origin": "decree",
+      "row": 3
+    },
+    "д": {
+      "lower": "d",
+      "upper": "D",
+      "all_caps": "D",
+      "origin": "decree",
+      "row": 4
+    },
+    "е": {
+      "lower": "e",
+      "upper": "E",
+      "all_caps": "E",
+      "origin": "decree",
+      "row": 5
+    },
+    "ф": {
+      "lower": "f",
+      "upper": "F",
+      "all_caps": "F",
+      "origin": "decree",
+      "row": 6
+    },
+    "г": {
+      "lower": "g",
+      "upper": "G",
+      "all_caps": "G",
+      "origin": "decree",
+      "row": 7
+    },
+    "ғ": {
+      "lower": "ǵ",
+      "upper": "Ǵ",
+      "all_caps": "Ǵ",
+      "origin": "decree",
+      "row": 8
+    },
+    "х": {
+      "lower": "h",
+      "upper": "H",
+      "all_caps": "H",
+      "origin": "decree",
+      "row": 9
+    },
+    "һ": {
+      "lower": "h",
+      "upper": "H",
+      "all_caps": "H",
+      "origin": "decree",
+      "row": 9
+    },
+    "і": {
+      "lower": "i",
+      "upper": "I",
+      "all_caps": "I",
+      "origin": "decree",
+      "row": 10
+    },
+    "и": {
+      "lower": "ı",
+      "upper": "I",
+      "all_caps": "I",
+      "origin": "decree",
+      "row": 11
+    },
+    "й": {
+      "lower": "ı",
+      "upper": "I",
+      "all_caps": "I",
+      "origin": "decree",
+      "row": 11
+    },
+    "ж": {
+      "lower": "j",
+      "upper": "J",
+      "all_caps": "J",
+      "origin": "decree",
+      "row": 12
+    },
+    "к": {
+      "lower": "k",
+      "upper": "K",
+      "all_caps": "K",
+      "origin": "decree",
+      "row": 13
+    },
+    "л": {
+      "lower": "l",
+      "upper": "L",
+      "all_caps": "L",
+      "origin": "decree",
+      "row": 14
+    },
+    "м": {
+      "lower": "m",
+      "upper": "M",
+      "all_caps": "M",
+      "origin": "decree",
+      "row": 15
+    },
+    "н": {
+      "lower": "n",
+      "upper": "N",
+      "all_caps": "N",
+      "origin": "decree",
+      "row": 16
+    },
+    "ң": {
+      "lower": "ń",
+      "upper": "Ń",
+      "all_caps": "Ń",
+      "origin": "decree",
+      "row": 17
+    },
+    "о": {
+      "lower": "o",
+      "upper": "O",
+      "all_caps": "O",
+      "origin": "decree",
+      "row": 18
+    },
+    "ө": {
+      "lower": "ó",
+      "upper": "Ó",
+      "all_caps": "Ó",
+      "origin": "decree",
+      "row": 19
+    },
+    "п": {
+      "lower": "p",
+      "upper": "P",
+      "all_caps": "P",
+      "origin": "decree",
+      "row": 20
+    },
+    "қ": {
+      "lower": "q",
+      "upper": "Q",
+      "all_caps": "Q",
+      "origin": "decree",
+      "row": 21
+    },
+    "р": {
+      "lower": "r",
+      "upper": "R",
+      "all_caps": "R",
+      "origin": "decree",
+      "row": 22
+    },
+    "с": {
+      "lower": "s",
+      "upper": "S",
+      "all_caps": "S",
+      "origin": "decree",
+      "row": 23
+    },
+    "т": {
+      "lower": "t",
+      "upper": "T",
+      "all_caps": "T",
+      "origin": "decree",
+      "row": 24
+    },
+    "ұ": {
+      "lower": "u",
+      "upper": "U",
+      "all_caps": "U",
+      "origin": "decree",
+      "row": 25
+    },
+    "ү": {
+      "lower": "ú",
+      "upper": "Ú",
+      "all_caps": "Ú",
+      "origin": "decree",
+      "row": 26
+    },
+    "в": {
+      "lower": "v",
+      "upper": "V",
+      "all_caps": "V",
+      "origin": "decree",
+      "row": 27
+    },
+    "ы": {
+      "lower": "y",
+      "upper": "Y",
+      "all_caps": "Y",
+      "origin": "decree",
+      "row": 28
+    },
+    "у": {
+      "lower": "ý",
+      "upper": "Ý",
+      "all_caps": "Ý",
+      "origin": "decree",
+      "row": 29
+    },
+    "з": {
+      "lower": "z",
+      "upper": "Z",
+      "all_caps": "Z",
+      "origin": "decree",
+      "row": 30
+    },
+    "ш": {
+      "lower": "sh",
+      "upper": "Sh",
+      "all_caps": "SH",
+      "origin": "decree",
+      "row": 31
+    },
+    "ч": {
+      "lower": "ch",
+      "upper": "Ch",
+      "all_caps": "CH",
+      "origin": "decree",
+      "row": 32
+    },
+    "ё": {
+      "lower": "ıo",
+      "upper": "Io",
+      "all_caps": "IO",
+      "origin": "team_rule"
+    },
+    "ц": {
+      "lower": "ts",
+      "upper": "Ts",
+      "all_caps": "TS",
+      "origin": "team_rule"
+    },
+    "щ": {
+      "lower": "shch",
+      "upper": "Shch",
+      "all_caps": "SHCH",
+      "origin": "team_rule"
+    },
+    "ъ": {
+      "lower": "ʼ",
+      "upper": "ʼ",
+      "all_caps": "ʼ",
+      "origin": "team_rule"
+    },
+    "ь": {
+      "lower": "ʹ",
+      "upper": "ʹ",
+      "all_caps": "ʹ",
+      "origin": "team_rule"
+    },
+    "э": {
+      "lower": "e",
+      "upper": "E",
+      "all_caps": "E",
+      "origin": "team_rule"
+    },
+    "ю": {
+      "lower": "ıý",
+      "upper": "Iý",
+      "all_caps": "IÝ",
+      "origin": "team_rule"
+    },
+    "я": {
+      "lower": "ıa",
+      "upper": "Ia",
+      "all_caps": "IA",
+      "origin": "team_rule"
+    }
+  },
+  "transcription_notes": [
+    "Row19 uppercase Cyrillic O homoglyph transcribed as Latin O before NFC.",
+    "Row23 bracketed Latin c denotes Cyrillic s; row9 bracketed Latin h denotes Cyrillic ha."
+  ],
+  "team_rules": {
+    "out_of_table": "Explicit transliteration pairs, not an assertion of reformed loanword spelling. Hard/soft signs retain distinct visible modifier marks.",
+    "casing": "Whole uppercase words use all_caps; otherwise each Cyrillic uppercase character uses upper. Latin text stays unchanged.",
+    "digraph_collisions": "No artificial separators; skh/sh and sh/ch sequences are not promised reversible.",
+    "normalization": "NFC on transformed text nodes; protected tokens must remain exact.",
+    "unknown_cyrillic": "Preserve and report unresolved; never delete silently."
+  }
+}

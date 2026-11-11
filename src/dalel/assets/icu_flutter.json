@@ -1,0 +1,368 @@
+[
+  {
+    "id": "text",
+    "text": "Stone and water",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "empty",
+    "text": "",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "argument",
+    "text": "Hello {person}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "stray_close",
+    "text": "person}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "ignored_after_close",
+    "text": "Stone} {unused}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "argument_repetition",
+    "text": "{person} / {person}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "argument_space",
+    "text": "{ person }",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "plural_other",
+    "text": "{n, plural, other{Stones}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "plural_categories",
+    "text": "{n, plural, zero{None} one{One} two{Two} few{Few} many{Many} other{Other}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "equals_zero",
+    "text": "{n, plural, =0{None} other{Stones}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "equals_one",
+    "text": "{n, plural, =1{One} other{Stones}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "equals_two",
+    "text": "{n, plural, =2{Two} other{Stones}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "spaced_selector",
+    "text": "{n, plural, = 0 {None} other{Stones}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "literal_hash",
+    "text": "{n, plural, other{# stones}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "plain_and_plural",
+    "text": "{n}: {n, plural, other{stones}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "nested_select",
+    "text": "{g, select, a{{h, select, b{Yes} other{No}}} other{Unknown}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "nested_plural",
+    "text": "{n, plural, one{{m, plural, other{Pebbles}}} other{Rocks}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "plural_select",
+    "text": "{n, plural, one{{g, select, x{{person}} other{{person}}}} other{{person}}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "select_plural",
+    "text": "{g, select, x{{n, plural, one{One} other{Many}}} other{None}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "select",
+    "text": "{g, select, one_word{One} other{Other}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "numeric_select",
+    "text": "{g, select, 7{Seven} other{Other}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "empty_branch",
+    "text": "{g, select, x{} other{}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "duplicate_plural",
+    "text": "{n, plural, other{First} other{Last}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "duplicate_select",
+    "text": "{g, select, x{First} x{Last} other{Else}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "plural_alias",
+    "text": "{n, plural, =0{First} zero{Last} other{Else}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "apostrophe_disabled",
+    "text": "Can't replace '{person}'",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "keyword_argument",
+    "text": "{plural} {select} {date} {time} {other}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "multiline",
+    "text": "{n,\n plural,\n one{A\nB} other{C}}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "date_yMd",
+    "text": "{when, date, ::yMd}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "date_yMMMMEEEEd",
+    "text": "{when, date, ::yMMMMEEEEd}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "date_Hm",
+    "text": "{when, date, ::Hm}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "date_jms",
+    "text": "{when, date, ::jms}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "date_QQQQ",
+    "text": "{when, date, ::QQQQ}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "date_LLLL",
+    "text": "{when, date, ::LLLL}",
+    "valid": true,
+    "escaping": false
+  },
+  {
+    "id": "escaped_braces",
+    "text": "'{literal}' {person}",
+    "valid": true,
+    "escaping": true
+  },
+  {
+    "id": "double_apostrophe",
+    "text": "It''s {person}",
+    "valid": true,
+    "escaping": true
+  },
+  {
+    "id": "quoted_plural",
+    "text": "'{n, plural, other{literal}}'",
+    "valid": true,
+    "escaping": true
+  },
+  {
+    "id": "quoted_branches",
+    "text": "{n, plural, other{'{x}'}}",
+    "valid": true,
+    "escaping": true
+  },
+  {
+    "id": "missing_other",
+    "text": "{n, plural, one{One}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "missing_select_other",
+    "text": "{g, select, a{A}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "invalid_category",
+    "text": "{n, plural, several{Some} other{All}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "equals_three",
+    "text": "{n, plural, =3{Three} other{All}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "negative_selector",
+    "text": "{n, plural, =-1{Negative} other{All}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "fraction_selector",
+    "text": "{n, plural, =1.5{Fraction} other{All}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "offset",
+    "text": "{n, plural, offset:1 one{One} other{All}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "ordinal",
+    "text": "{n, selectordinal, one{First} other{Later}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "number_format",
+    "text": "{n, number, integer}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "date_no_skeleton",
+    "text": "{when, date}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "date_plain_style",
+    "text": "{when, date, short}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "date_custom_pattern",
+    "text": "{when, date, ::yyyyMMdd}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "date_unknown",
+    "text": "{when, date, ::invented}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "date_missing_colon",
+    "text": "{when, date, :yMd}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "date_trailing_text",
+    "text": "{when, date, ::yMd junk}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "unclosed",
+    "text": "{person",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "empty_argument",
+    "text": "{}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "missing_comma",
+    "text": "{n plural other{All}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "missing_body",
+    "text": "{n, plural, other}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "hyphen_select",
+    "text": "{g, select, one-two{A} other{B}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "equals_select",
+    "text": "{g, select, =0{A} other{B}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "unclosed_nested",
+    "text": "{n, plural, other{{g, select, other{A}}}",
+    "valid": false,
+    "escaping": false
+  },
+  {
+    "id": "unmatched_quote",
+    "text": "Can't use {person}",
+    "valid": false,
+    "escaping": true
+  }
+]
